@@ -1,14 +1,12 @@
-# llm-models-deploy
-Por supuesto, aquí tienes el README en un formato descargable para incluirlo en tu repositorio de GitHub:
+# Chatbot usando LLM
 
-```
-# Chatbot para Consulta de Eventos
+## Descripción
 
 Este proyecto consiste en un Chatbot desarrollado en Python utilizando Flask como interfaz, que permite a los usuarios realizar consultas sobre eventos JSON de ciberseguridad almacenados (esta parte se debe variar de acuerdo a tus datos) . El modelo de lenguaje utilizado es GPT-3.5 de OpenAI alojado en Azure. La información relevante se extrae de los archivos JSON, se vectoriza y se almacena en Pinecone para una rápida recuperación durante las consultas.
 
 ## Configuración
 
-Para ejecutar este proyecto, necesitarás definir algunas variables de entorno en un archivo `.env`. Aquí está un ejemplo de cómo podría ser:
+Para ejecutar este proyecto, necesitarás definir algunas variables de entorno en un archivo `.env`, debe tener una cuenta en AZURE OpenAI y en PINECONE. Aquí están las variables a completar:
 
 ```
 OPENAI_API_KEY=xxxxxxxxxxxxxxxx
@@ -21,22 +19,26 @@ OPENAI_DEPLOYMENT_NAME=xxxxxxxxxxxxxxxx
 PINECONE_API_KEY=xxxxxxxxxxxxxxxx
 ```
 
-Asegúrate de que tienes Python y Flask instalados en tu entorno antes de ejecutar la aplicación.
+Instala las dependencias necesarias.
+
+```
+pip install -r requirements.txt
+```
 
 ## Ejecución
 
-Para ejecutar la aplicación, simplemente ejecuta `app.py` en tu terminal:
+Para ejecutar la aplicación, simplemente ejecuta `app.py` en tu terminal, recuende que es una aplicación Flask:
 
 ```
 python app.py
 ```
 
-Esto iniciará el servidor Flask y podrás acceder a la aplicación desde tu navegador.
+Esto iniciará el servidor Flask y podrás acceder a la aplicación desde tu navegador http://localhost:5000  
 
 ## Contribución
 
-Si deseas contribuir a este proyecto, ¡no dudes en hacerlo! Simplemente crea un fork del repositorio, realiza tus cambios y envía un pull request. ¡Estamos ansiosos por ver tus contribuciones!
-```
+Si deseas contribuir a este proyecto, ¡no dudes en hacerlo! Simplemente crea un fork del repositorio, realiza tus cambios y envía un pull request. ¡Estoy ansioso por ver tus contribuciones!
+
 
 ## Licencia
 
