@@ -1,0 +1,28 @@
+{
+    "event_id": "699518",
+    "event_type": "malware_detected",
+    "severity": "high",
+    "timestamp": "2023-11-01T16:57:38Z",
+    "device": {
+        "device_id": "device962",
+        "hostname": "user-pc-47",
+        "ip_address": "168.136.108.67",
+        "user": "usuario30"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario15\\Documents\\malicious_file.exe",
+        "hash": "ea37d810360d14bef8f34d1461fe68ff",
+        "malware_family": "Sodinokibi",
+        "tactics": [
+            "execution",
+            "privilege_escalation"
+        ],
+        "techniques": [
+            "T1018",
+            "T1084"
+        ]
+    },
+    "incident_score": 52,
+    "action_taken": "blocked",
+    "status": "resolved"
+}

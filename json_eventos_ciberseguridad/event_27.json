@@ -1,0 +1,28 @@
+{
+    "event_id": "875419",
+    "event_type": "malware_detected",
+    "severity": "medium",
+    "timestamp": "2023-11-02T14:57:28Z",
+    "device": {
+        "device_id": "device573",
+        "hostname": "user-pc-39",
+        "ip_address": "240.251.69.204",
+        "user": "usuario14"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario1\\Documents\\malicious_file.exe",
+        "hash": "58821384f73e9cd21662e346fe4ebf09",
+        "malware_family": "Sodinokibi",
+        "tactics": [
+            "privilege_escalation",
+            "persistence"
+        ],
+        "techniques": [
+            "T1014",
+            "T1012"
+        ]
+    },
+    "incident_score": 27,
+    "action_taken": "deleted",
+    "status": "investigating"
+}

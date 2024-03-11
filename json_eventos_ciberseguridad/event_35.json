@@ -1,0 +1,28 @@
+{
+    "event_id": "806348",
+    "event_type": "malware_detected",
+    "severity": "high",
+    "timestamp": "2023-11-01T23:45:49Z",
+    "device": {
+        "device_id": "device142",
+        "hostname": "user-pc-43",
+        "ip_address": "202.197.164.163",
+        "user": "usuario2"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario32\\Documents\\malicious_file.exe",
+        "hash": "90827937130c94a4cf3fa77dddaf4efa",
+        "malware_family": "Ryuk",
+        "tactics": [
+            "persistence",
+            "privilege_escalation"
+        ],
+        "techniques": [
+            "T1043",
+            "T1099"
+        ]
+    },
+    "incident_score": 31,
+    "action_taken": "blocked",
+    "status": "resolved"
+}

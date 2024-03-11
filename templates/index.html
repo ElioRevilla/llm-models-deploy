@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Eventos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ECF0F1; /* Fondo de la página ajustado a un gris claro */
+        }
+        .chat-container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 2% auto;
+            background-color: white; /* Fondo del contenedor del chat */
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+        }
+        .chat-header {
+            background-color: #27AE60; /* Cambiado a un verde */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .chat-header h2 {
+            margin: 0;
+        }
+        .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .chat-messages {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: scroll;
+        }
+        .chat-messages p {
+            background: #eee; /* Fondo de los mensajes */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+        .chat-messages .bot-message {
+            background: #ABEBC6; /* Cambiado a un verde claro para mensajes del bot */
+        }
+        .chat-form textarea {
+            width: calc(100% - 150px);
+            padding: 10px;
+            border: 2px solid #229954; /* Borde del área de texto ajustado a verde */
+            border-radius: 5px;
+            resize: none;
+            height: 50px;
+            font-size: 1em;
+            margin-right: 10px;
+        }
+        .chat-form button {
+            padding: 10px 20px;
+            border: none;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            background-color: #28B463; /* Cambiado a un verde */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .chat-form button:hover {
+            background-color: #1E8449; /* Cambiado a un verde oscuro para el efecto hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chatbot</h2>
+            <div class="company-name"></div>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-form">
+            <textarea id="consultaInput" placeholder="Escribe tu consulta aquí..."></textarea>
+            <button onclick="enviarConsulta()">Enviar Consulta</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function enviarConsulta() {
+            var consulta = $("#consultaInput").val();
+            if(consulta.trim() === '') {
+                alert('Por favor, escribe una consulta.');
+                return;
+            }
+            var userMessage = '<p>' + consulta + '</p>';
+            $("#chat-messages").append(userMessage);
+            $("#consultaInput").val('');
+            $.ajax({
+                url: '/consultar-evento',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ "consulta": consulta }),
+                success: function(response) {
+                    var botMessage = '<p class="bot-message">' + response.respuesta + '</p>';
+                    $("#chat-messages").append(botMessage);
+                    $("#chat-messages").scrollTop($("#chat-messages")[0].scrollHeight);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

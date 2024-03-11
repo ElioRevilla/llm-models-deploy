@@ -1,0 +1,28 @@
+{
+    "event_id": "681876",
+    "event_type": "malware_detected",
+    "severity": "medium",
+    "timestamp": "2023-11-05T13:32:46Z",
+    "device": {
+        "device_id": "device218",
+        "hostname": "user-pc-27",
+        "ip_address": "240.144.24.61",
+        "user": "usuario21"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario39\\Documents\\malicious_file.exe",
+        "hash": "cf85eb398153ddb586990dd5520c50fc",
+        "malware_family": "Ryuk",
+        "tactics": [
+            "execution",
+            "persistence"
+        ],
+        "techniques": [
+            "T1001",
+            "T1058"
+        ]
+    },
+    "incident_score": 30,
+    "action_taken": "deleted",
+    "status": "unresolved"
+}

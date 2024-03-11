@@ -1,0 +1,28 @@
+{
+    "event_id": "721146",
+    "event_type": "malware_detected",
+    "severity": "high",
+    "timestamp": "2023-11-05T03:16:33Z",
+    "device": {
+        "device_id": "device592",
+        "hostname": "user-pc-22",
+        "ip_address": "173.219.254.223",
+        "user": "usuario15"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario27\\Documents\\malicious_file.exe",
+        "hash": "0ebf05e59b9d3a6a57d7f116dd20f898",
+        "malware_family": "TrickBot",
+        "tactics": [
+            "privilege_escalation",
+            "persistence"
+        ],
+        "techniques": [
+            "T1024",
+            "T1036"
+        ]
+    },
+    "incident_score": 52,
+    "action_taken": "quarantined",
+    "status": "investigating"
+}

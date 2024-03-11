@@ -1,0 +1,28 @@
+{
+    "event_id": "338202",
+    "event_type": "malware_detected",
+    "severity": "medium",
+    "timestamp": "2023-11-02T23:58:08Z",
+    "device": {
+        "device_id": "device569",
+        "hostname": "user-pc-33",
+        "ip_address": "231.143.86.210",
+        "user": "usuario15"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario6\\Documents\\malicious_file.exe",
+        "hash": "9d6aa1e92f75786212b109a907ad6b13",
+        "malware_family": "TrickBot",
+        "tactics": [
+            "execution",
+            "persistence"
+        ],
+        "techniques": [
+            "T1042",
+            "T1081"
+        ]
+    },
+    "incident_score": 58,
+    "action_taken": "quarantined",
+    "status": "investigating"
+}

@@ -1,0 +1,28 @@
+{
+    "event_id": "364785",
+    "event_type": "malware_detected",
+    "severity": "medium",
+    "timestamp": "2023-11-04T16:30:17Z",
+    "device": {
+        "device_id": "device333",
+        "hostname": "user-pc-26",
+        "ip_address": "171.73.137.106",
+        "user": "usuario47"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario29\\Documents\\malicious_file.exe",
+        "hash": "26989009482a20d2365cff0766a63e95",
+        "malware_family": "Sodinokibi",
+        "tactics": [
+            "persistence",
+            "execution"
+        ],
+        "techniques": [
+            "T1058",
+            "T1027"
+        ]
+    },
+    "incident_score": 9,
+    "action_taken": "blocked",
+    "status": "unresolved"
+}

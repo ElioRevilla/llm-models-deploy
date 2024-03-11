@@ -1,0 +1,28 @@
+{
+    "event_id": "749557",
+    "event_type": "malware_detected",
+    "severity": "medium",
+    "timestamp": "2023-11-04T21:37:13Z",
+    "device": {
+        "device_id": "device474",
+        "hostname": "user-pc-22",
+        "ip_address": "20.249.146.181",
+        "user": "usuario37"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario44\\Documents\\malicious_file.exe",
+        "hash": "651bac972ce9765e960e2f8b2f8b1b91",
+        "malware_family": "Ryuk",
+        "tactics": [
+            "privilege_escalation",
+            "execution"
+        ],
+        "techniques": [
+            "T1079",
+            "T1036"
+        ]
+    },
+    "incident_score": 79,
+    "action_taken": "quarantined",
+    "status": "investigating"
+}

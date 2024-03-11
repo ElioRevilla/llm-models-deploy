@@ -1,0 +1,28 @@
+{
+    "event_id": "347564",
+    "event_type": "malware_detected",
+    "severity": "high",
+    "timestamp": "2023-11-03T20:59:22Z",
+    "device": {
+        "device_id": "device852",
+        "hostname": "user-pc-38",
+        "ip_address": "205.102.76.22",
+        "user": "usuario29"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario9\\Documents\\malicious_file.exe",
+        "hash": "95650347fe0caa7506d012cdafa7f5e8",
+        "malware_family": "Ryuk",
+        "tactics": [
+            "execution",
+            "privilege_escalation"
+        ],
+        "techniques": [
+            "T1094",
+            "T1015"
+        ]
+    },
+    "incident_score": 38,
+    "action_taken": "deleted",
+    "status": "resolved"
+}

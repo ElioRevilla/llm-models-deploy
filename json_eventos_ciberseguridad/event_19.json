@@ -1,0 +1,28 @@
+{
+    "event_id": "404761",
+    "event_type": "malware_detected",
+    "severity": "high",
+    "timestamp": "2023-11-03T02:08:28Z",
+    "device": {
+        "device_id": "device687",
+        "hostname": "user-pc-35",
+        "ip_address": "67.59.116.88",
+        "user": "usuario25"
+    },
+    "attack_details": {
+        "file_path": "C:\\Users\\usuario10\\Documents\\malicious_file.exe",
+        "hash": "87317a4983102a26338450daf9f1b378",
+        "malware_family": "TrickBot",
+        "tactics": [
+            "persistence",
+            "privilege_escalation"
+        ],
+        "techniques": [
+            "T1057",
+            "T1006"
+        ]
+    },
+    "incident_score": 10,
+    "action_taken": "blocked",
+    "status": "unresolved"
+}
